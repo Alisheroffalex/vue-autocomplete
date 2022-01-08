@@ -1,17 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <img alt="Vue logo" src="./assets/logo.png" />
+  <br />
+  <v-autocomplete
+    :data="data"
+    placeholder="Search..."
+    v-model="val"
+  ></v-autocomplete>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import VAutocomplete from "./components/VAutocomplete.vue";
 
 export default {
-  name: 'App',
+  name: "App",
   components: {
-    HelloWorld
-  }
-}
+    VAutocomplete,
+  },
+  data() {
+    return {
+      data: ["Lorem", "ipsum", "sit", "dolor", "amet de"],
+      val: "",
+    };
+  },
+};
 </script>
 
 <style>
